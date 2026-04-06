@@ -905,6 +905,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727388443}
   m_CullTransparentMesh: 1
+--- !u!1 &1152868150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1152868152}
+  - component: {fileID: 1152868151}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1152868151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152868150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422eab2bb474e7647a4594388f7c4564, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BondManager
+  bondXP: 0
+  bondLevel: 1
+  xpToNextLevel: 20
+  bondSlider: {fileID: 1175149320}
+  bondText: {fileID: 727388446}
+--- !u!4 &1152868152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152868150}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.42535, y: -0.00517, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1175149317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,6 +1077,7 @@ GameObject:
   - component: {fileID: 1202098443}
   - component: {fileID: 1202098442}
   - component: {fileID: 1202098445}
+  - component: {fileID: 1202098446}
   m_Layer: 0
   m_Name: Play
   m_TagString: Untagged
@@ -1098,7 +1148,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1202098443}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1202098446}
+        m_TargetAssemblyTypeName: Play, Assembly-CSharp
+        m_MethodName: PerformAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1202098443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,6 +1219,18 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1202098446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202098440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adc87d4e6e15683478fc9f1e69b427c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Play
 --- !u!1 &1622201895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,6 +1244,7 @@ GameObject:
   - component: {fileID: 1622201898}
   - component: {fileID: 1622201897}
   - component: {fileID: 1622201900}
+  - component: {fileID: 1622201901}
   m_Layer: 0
   m_Name: Pet
   m_TagString: Untagged
@@ -1240,7 +1315,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1622201898}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1622201901}
+        m_TargetAssemblyTypeName: Pet, Assembly-CSharp
+        m_MethodName: PerformAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1622201898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1299,6 +1386,18 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1622201901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622201895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 254c520afc3e8484cb77d47a6a77b3f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pet
 --- !u!1 &1727463150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,6 +1916,7 @@ GameObject:
   - component: {fileID: 1880226702}
   - component: {fileID: 1880226701}
   - component: {fileID: 1880226704}
+  - component: {fileID: 1880226705}
   m_Layer: 0
   m_Name: Feed
   m_TagString: Untagged
@@ -1887,7 +1987,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1880226702}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1880226705}
+        m_TargetAssemblyTypeName: Feed, Assembly-CSharp
+        m_MethodName: PerformAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1880226702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1946,6 +2058,18 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1880226705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880226699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0f070aa9a084e4b9b57500020646f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Feed
 --- !u!1 &1984358320
 GameObject:
   m_ObjectHideFlags: 0
@@ -2123,7 +2247,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.1, y: -0.3, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2138,3 +2262,4 @@ SceneRoots:
   - {fileID: 1984358322}
   - {fileID: 1875256308}
   - {fileID: 540108770}
+  - {fileID: 1152868152}
