@@ -6,7 +6,7 @@ public class Pet : MonoBehaviour
 
     public virtual void PerformAction()
     {
-        Debug.Log("Interacting with pet. XP: " + xpReward);
+        Debug.Log("Interacting with frog. XP: " + xpReward);
         BondManager.Instance.AddXP(xpReward);
     }
 }
