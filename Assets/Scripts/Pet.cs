@@ -1,12 +1,10 @@
 using UnityEngine;
 
-public class Pet : MonoBehaviour
+public class Pet : Action
 {
-    protected int xpReward = 5;
-
-    public virtual void PerformAction()
+    public override void PerformAction()
     {
-        Debug.Log("Interacting with frog. XP: " + xpReward);
-        BondManager.Instance.AddXP(xpReward);
+        base.PerformAction();
+        Debug.Log("Petting frog. XP: " + xpReward);
     }
 }

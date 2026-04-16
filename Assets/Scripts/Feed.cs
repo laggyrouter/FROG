@@ -1,11 +1,10 @@
 using UnityEngine;
 
-public class Feed : MonoBehaviour
+public class Feed : Action
 {
-  protected int xpReward = 5;
-    public virtual void PerformAction()
+    public override void PerformAction()
     {
+        base.PerformAction();
         Debug.Log("Feeding frog. XP: " + xpReward);
-        BondManager.Instance.AddXP(xpReward);
     }
 }

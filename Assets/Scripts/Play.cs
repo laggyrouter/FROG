@@ -1,13 +1,10 @@
 using UnityEngine;
 
-public class Play : MonoBehaviour
+public class Play : Action
 {
-    protected int xpReward = 5;
-    public virtual void PerformAction()
+    public override void PerformAction()
     {
+        base.PerformAction();
         Debug.Log("Playing with frog. XP: " + xpReward);
-        BondManager.Instance.AddXP(xpReward);
     }
-
 }
-
